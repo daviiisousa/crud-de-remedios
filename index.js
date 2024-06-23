@@ -2,7 +2,8 @@
 function enviar(){
     let nomeRemedio = document.getElementById('nomeRemedio').value;
     let quantidade = document.getElementById('quantidade').value;
-    let resposta = document.getElementById('res2')
+    let resposta = document.getElementById('res')
+    
     if(!nomeRemedio || !/^[^\d]+$/.test(nomeRemedio)){
         alert('digite um nome de remedio valido')
         return
@@ -11,14 +12,20 @@ function enviar(){
         alert('digite uma quantidade valida')
         return
     }
-    let conteudo =
+
+    const conteudo = document.createElement('p')
+    conteudo.innerHTML = 
     `<table  class="table table-hover mt-3"> 
             <tr>
                 <td>${nomeRemedio}</td>
                 <td class="w-50">${quantidade}</td>
             </tr>
     </table>`
-    resposta.innerHTML = conteudo 
+
+    const div = document.createElement('div')
+
+    div.appendChild(conteudo)
+    resposta.appendChild(div) 
 }
 
 async function API(){
