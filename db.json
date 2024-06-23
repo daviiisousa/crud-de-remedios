@@ -3,6 +3,14 @@
     {
         "nome": "Dipirona",
         "quantidade": "10"
+    },
+    {
+        "nome": "Ibuprofeno",
+        "quantidade":"10"
+    },
+    {
+        "nome":"Dorflex",
+        "quantidade":"20"
     }
 ]
 }

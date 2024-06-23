@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,21 +12,30 @@
     <main class="container">
 
        <div>
-        <h1 class="pt-3">Crud De <strong class="text-danger">Remedios👨🏻‍⚕️🏣</strong></h1>
+        <h1 class="pt-3">Banco De <strong class="text-danger">Remedios👨🏻‍⚕️🏣</strong></h1>
       </div>
       
         <form>
             <div class="pt-3 w-50 ">
-                <label class="form-label h6 " for="nomeRemedio">Nome do Remedio</label>
-                <input class="form-control " type="text" name="nomeRemedio" id="nomeRemedio">
+                <label class="form-label h6 " for="nomeRemedio">Remedio</label>
+                <input class="form-control" placeholder="Digite o nome do remedio" type="text" name="nomeRemedio" id="nomeRemedio">
             </div>
             <div class="pt-3 w-50">
                 <label class="form-label h6" for="quantidade">quantidade</label>
                 <input class="form-control" type="number" name="quantidade" id="quantidade">
-                <button type="button" class="btn btn-primary mt-4">Enviar</button>
+                <button type="button" onclick="enviar()" class="btn btn-primary mt-4">Enviar</button>
             </div>
         </form>
         <div id="res">
+            <table class="table table-striped table-hover mt-5">
+                <tr>
+                    <th>Remedio</th>
+                    <th>Quantidade</th>
+                </tr>
+            </table>
+        </div>
+        <div id="res2">
+
         </div>
     </main>
     
