@@ -1,4 +1,4 @@
-// o cosigo abaixo nao deu certo
+// o codigo abaixo nao deu certo
 // function enviar(){
 //     let nomeRemedio = document.getElementById('nomeRemedio').value;
 //     let quantidade = document.getElementById('quantidade').value;
@@ -21,6 +21,15 @@ async function API(){
         method: "GET"
     };
 
+    document.getElementById('res').innerHTML = `
+        <tr class="text-center">
+            <td colspan="4">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden"></span>
+                </div>
+            </td>
+        </tr>
+    `
     let resposta = document.getElementById('res');
 
    const response = await fetch("http://localhost:3000/Remedios", metodos);
