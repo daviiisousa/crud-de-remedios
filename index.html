@@ -9,21 +9,25 @@
     <title>Crud de Remedios</title>
 </head>
 <body>
-    <div class="container-fluid">
-        <h1 class="text-center pt-3">Crud De <strong class="text-danger">Remedios</strong></h1>
+    <main class="container">
+
+       <div>
+        <h1 class="pt-3">Crud De <strong class="text-danger">Remedios</strong></h1>
       </div>
-      <main class="container " >
-        <form id="formConteiner" class="text-center">
-            <div class="text-center pt-3 w-50 ">
-                <label class="form-label h3 " for="nomeRemedio">Nome do Remedio</label>
+      
+        <form>
+            <div class="pt-3 w-50 ">
+                <label class="form-label h6 " for="nomeRemedio">Nome do Remedio</label>
                 <input class="form-control " type="text" name="nomeRemedio" id="nomeRemedio">
             </div>
-            <div class="text-center pt-3 w-50">
-                <label class="form-label h3" for="quantidade">quantidade</label>
+            <div class="pt-3 w-50">
+                <label class="form-label h6" for="quantidade">quantidade</label>
                 <input class="form-control" type="number" name="quantidade" id="quantidade">
+                <button type="button" id="enviar" class="btn btn-primary mt-4">Enviar</button>
             </div>
         </form>
-      </main>
+
+    </main>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="index.js"></script>
