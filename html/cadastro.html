@@ -4,40 +4,86 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>CAPS</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+        <link rel="icon" type="image/x-icon" href="../documentos/favicon.png" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
     </head>
 
     <body>
-        <main class="container">
-    
-           <div>
-            <h1 class="pt-3">Banco De <strong class="text-danger">Remedios👨🏻‍⚕️🏣</strong></h1>
-          </div>
-          
-            <form>
-                <div class="pt-3 w-50 ">
-                    <label class="form-label h6 " for="nomeRemedio">Remedio</label>
-                    <input class="form-control" placeholder="Digite o nome do remedio" type="text" name="nomeRemedio" id="nomeRemedio">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">Dragaria do CAPS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Pagina Principal</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Termos</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Produtos</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">Todos os Produtos</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#!">Top Produtos</a></li>
+                                <li><a class="dropdown-item" href="#!">Novos Itens</a></li>
+                                <li><a class="dropdown-item" href="./cadastro.html">Cadastro</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            Checkout
+                            <span class="badge bg-red text-white ms-1 rounded-pill">0</span>
+                        </button>
+                    </form>
                 </div>
-                <div class="pt-3 w-50">
-                    <label class="form-label h6" for="quantidade">quantidade</label>
-                    <input class="form-control" type="number" name="quantidade" id="quantidade">
-                    <button type="button" onclick="enviar()" class="btn btn-primary mt-4">Enviar</button>
-                </div>
-            </form>
-            <div id="res">
-                <table class="table table-striped table-hover mt-5">
-                    <tr>
-                        <th>Remedio</th>
-                        <th>Quantidade</th>
-                    </tr>
-                </table>
             </div>
-        </main>
+        </nav>
+
+        <header class="bg-red py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Drogaria do CAPS</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">A Louca Drogaria do Seu Bairro!</p>
+                </div>
+            </div>
+        </header>
+
+        <body>
+            <main class="container">
         
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script src="./js/index.js"></script>
+               <div>
+                <h1 class="pt-3">Banco De <strong class="text-danger">Remedios👨🏻‍⚕️🏣</strong></h1>
+              </div>
+              
+                <form>
+                    <div class="pt-3 w-50 ">
+                        <label class="form-label h6 " for="nomeRemedio">Remedio</label>
+                        <input class="form-control" placeholder="Digite o nome do remedio" type="text" name="nomeRemedio" id="nomeRemedio">
+                    </div>
+                    <div class="pt-3 w-50">
+                        <label class="form-label h6" for="quantidade">quantidade</label>
+                        <input class="form-control" type="number" name="quantidade" id="quantidade">
+                        <button type="button" onclick="enviar()" class="btn btn-primary mt-4">Enviar</button>
+                    </div>
+                </form>
+                <div id="res">
+                    <table class="table table-striped table-hover mt-5">
+                        <tr>
+                            <th>Remedio</th>
+                            <th>Quantidade</th>
+                        </tr>
+                    </table>
+                </div>
+            </main>
+            
+        <!-- Footer-->
+        <footer class="py-5 bg-red">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Centros de Atenção Psicossocial 2002</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../js/index.js"></script>
     </body>
 </html>
