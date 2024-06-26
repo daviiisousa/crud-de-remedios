@@ -11,7 +11,7 @@ function enviar(){
         }) 
         return
     }
-    if(!quantidade || quantidade < 0){
+    if(!quantidade || quantidade <= 0){
         Swal.fire({
             title: `O campo quantidade esta incorreto`,
             icon: "error"
