@@ -38,7 +38,7 @@ function enviar(){
     const div = document.createElement('div')
 
     div.appendChild(conteudo)
-    resposta.appendChild(div) 
+    resposta.appendChild(div)
 }
 
 async function API(){
