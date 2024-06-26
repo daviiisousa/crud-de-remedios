@@ -5,12 +5,25 @@ function enviar(){
     let resposta = document.getElementById('res')
     
     if(!nomeRemedio || !/^[^\d]+$/.test(nomeRemedio)){
-        alert('digite um nome de remedio valido')
+        Swal.fire({
+            title: `O campo nome do remedio esta incorreto`,
+            icon: "error"
+        }) 
         return
     }
     if(!quantidade || quantidade < 0){
-        alert('digite uma quantidade valida')
+        Swal.fire({
+            title: `O campo quantidade esta vazio`,
+            icon: "error"
+        })
         return
+    }
+    if(nomeRemedio && quantidade){
+        Swal.fire({
+            title: `remedio cadastrado`,
+            icon: "success"
+        })
+        
     }
 
     const conteudo = document.createElement('p')
