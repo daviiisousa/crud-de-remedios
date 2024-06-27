@@ -31,7 +31,7 @@ function enviar(){
     `<table  class="table table-hover mt-3"> 
             <tr>
                 <td>${nomeRemedio}</td>
-                <td class="w-50">${quantidade}</td>
+                <td>${quantidade}</td>
             </tr>
     </table>`
 
@@ -85,13 +85,33 @@ async function API(){
     `<table class="table table-hover">
     <tr>
         <td>${remedio.nome}</td>
-        <td class="w-50">${remedio.quantidade}</td>
+        <td class="w-25">${remedio.quantidade}</td>
+        <td class="w-25"> <button type="button" onclick="pedido()" class="btn btn-outline-primary">Fazer Pedido</button></td> 
     </tr>
     </table>
     `  
    })
 
 }
+
+function pedido(){
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Pedido feito com sucesso"
+      });
+    
+    }
 
 API()
 
