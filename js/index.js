@@ -39,6 +39,22 @@ function enviar(){
 
     div.appendChild(conteudo)
     resposta.appendChild(div)
+
+    const payload = {
+        nome: nomeRemedio,
+        quantidade: quantidade
+    }
+
+    const requestOptions = {
+        method: "POST",
+        redirect: "follow",
+        body: JSON.stringify(payload)
+      };
+      
+      fetch("http://localhost:3000/Remedios", requestOptions)
+        .then((response) => response.text( ))
+        .then((result) => console.log(result))
+        .catch((error) => console.error(error));
 }
 
 async function API(){
