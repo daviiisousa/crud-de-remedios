@@ -108,7 +108,7 @@ function pedido(){
       });
       Toast.fire({
         icon: "success",
-        title: "Pedido feito com sucessor"
+        title: "Pedido feito com sucesso"
       });
     
     }
