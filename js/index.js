@@ -26,20 +26,6 @@ function enviar(){
         
     }
 
-    const conteudo = document.createElement('p')
-    conteudo.innerHTML = 
-    `<table  class="table table-hover mt-3"> 
-            <tr>
-                <td>${nomeRemedio}</td>
-                <td>${quantidade}</td>
-            </tr>
-    </table>`
-
-    const div = document.createElement('div')
-
-    div.appendChild(conteudo)
-    resposta.appendChild(div)
-
     const payload = {
         nome: nomeRemedio,
         quantidade: quantidade
@@ -53,7 +39,7 @@ function enviar(){
       
       fetch("http://localhost:3000/Remedios", requestOptions)
         .then((response) => response.text( ))
-        .then((result) => console.log(result))
+        .then((result) => API())
         .catch((error) => console.error(error));
 }
 
@@ -71,27 +57,37 @@ async function API(){
 
    const remedios = data;
 
-   remedios.map((remedio) =>{
+   const tableElement = document.getElementById('res');
 
-    const div = document.createElement('div');
+   tableElement.innerHTML = `
+        <tr>
+            <th>Remedio</th>
+            <th>Quantidade</th>
+            <th colspan="2">Ações</th>
+        </tr>
+   `
 
-    const quantidade = document.createElement('p')
-    
-    const nome = document.createElement('p');
-    
-    div.appendChild(nome);
-    div.appendChild(quantidade);
-    resposta.appendChild(div).innerHTML = 
-    `<table class="table table-hover">
-    <tr>
-        <td>${remedio.nome}</td>
-        <td class="w-25">${remedio.quantidade}</td>
-        <td class="w-25"> <button type="button" onclick="pedido()" class="btn btn-outline-primary">Fazer Pedido</button></td> 
-    </tr>
-    </table>
-    `  
-   })
+   tableElement.innerHTML += remedios.map((remedio) => {
+        return `
+                <tr>
+                    <td>${remedio.nome}</td>
+                    <td class="w-25">${remedio.quantidade}</td>
+                    <td class="w-25"> <button type="button" onclick="pedido()" class="btn btn-outline-primary">Fazer Pedido</button></td> 
+                    <td class="w-25"> <button type="button" onclick="excluir('${remedio.id}')" class="btn btn-outline-danger">Excluir</button></td> 
+                </tr>
+            `
+   });
+}
 
+function excluir(id) {
+    const requestOptions = {
+        method: "DELETE"
+    };
+
+    fetch(`http://localhost:3000/Remedios/${id}`, requestOptions)
+        .then((response) => response.text())
+        .then((result) => API())
+        .catch((error) => console.error(error));
 }
 
 function pedido(){
