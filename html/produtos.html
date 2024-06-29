@@ -49,46 +49,207 @@
             </div>
         </header>
 
-        <main class="container">
-            <h1 class="text-center mt-3">Produtos</h1>
-            <h5 class="text-center mt-3 mb-3">aqui vc pode ver seus produtos adicionados</h5>
-            <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Confirme seu Pedido
-        </button>
-        
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Seus Dados</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <input class="form-control mb-3" id="rua" placeholder="Rua" type="text"></input>
-                    <input class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx" type="tel"></input>
-                    <label for="inputState" class="form-label mt-3">Forma de pagamento</label>
-                    <select id="inputState" class="form-select">
-                    <option selected>Debito</option>
-                    <option>Credito</option>
-                    <option>Pix</option>
-                    <option>Dinheiro</option>
-                    </select>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <button type="button" onclick="Pedido()" class="btn btn-success" >
-                    Confirmar pedido
-                </button>
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Foto do remedio-->
+                            <img class="card-img-top" src="../content/creatina1.jfif" alt="..." />
+                            <!-- detalhes do remedio -->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- nome do remedio -->
+                                    <h5 class="fw-bolder">Creatina</h5>
+                                    R$ 120,00 - R$ 280,00
+                                </div>
+                            </div>
+                            <!-- ação do produto -->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Veja Mais</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Promoção -->
+                            <div class="badge bg-red text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Promoção</div>
+                            <!-- foto do remedio -->
+                             <img src="../content/hipoglos.webp" alt="">
+                            <!-- detalhes -->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- nome do remedio-->
+                                    <h5 class="fw-bolder">Hipoglos</h5>
+                                    <!-- avaliação -->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">R$ 20,00</span>
+                                    R$ 18,00
+                                </div>
+                            </div>
+                            <!-- ação do produto -->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Adicionar ao Checkout</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Promoção -->
+                            <div class="badge bg-red text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Promoção</div>
+                            <!-- Foto do remedio-->
+                             <img src="../content/Diazepam.webp" alt="">
+                            <!-- detalhes do remedio -->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- nome do remedio -->
+                                    <h5 class="fw-bolder">Diazepam</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">R$ 50,00</span>
+                                    R$ 25,00
+                                </div>
+                            </div>
+                            <!-- ação do produto -->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Adicionar ao Checkout</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Foto do remedio-->
+                             <img src="../content/fluoxetina.jpg" alt="">
+                            <!-- detalhes do remedio -->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- nome do remedio -->
+                                    <h5 class="fw-bolder">Fluoxetina</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    $40.00
+                                </div>
+                            </div>
+                            <!-- ação do produto -->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Adicionar ao Checkout</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Promoção -->
+                            <div class="badge bg-red text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Promoção</div>
+                            <!-- Foto do remedio-->
+                             <img src="../content/gardenal.jpg" alt="">
+                            <!-- detalhes do remedio -->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- nome do remedio -->
+                                    <h5 class="fw-bolder">Gardenal</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$50.00</span>
+                                    $25.00
+                                </div>
+                            </div>
+                            <!-- ação do produto -->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Adicionar ao Checkout</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Foto do remedio-->
+                             <img src="../content/cariani.jpg" alt="">
+                            <!-- detalhes do remedio -->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- nome do remedio -->
+                                    <h5 class="fw-bolder">Exclusivos</h5>
+                                    <!-- Product price-->
+                                    R$ 120,00 - R$ 280,00
+                                </div>
+                            </div>
+                            <!-- ação do produto -->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Veja Mais</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Promoção -->
+                            <div class="badge bg-red text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Promoção</div>
+                            <!-- Foto do remedio-->
+                             <img src="../content/TREMBOLONA.jpg" alt="">
+                            <!-- detalhes do remedio -->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- nome do remedio -->
+                                    <h5 class="fw-bolder">Trembolona</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">R$ 20,00</span>
+                                    R$ 18,00
+                                </div>
+                            </div>
+                            <!-- ação do produto -->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Adicionar ao Checkout</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Foto do remedio-->
+                             <img src="../content/Tadalafila.jpg" alt="">
+                            <!-- detalhes do remedio -->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- nome do remedio -->
+                                    <h5 class="fw-bolder">Tadafila</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    R$ 40,00
+                                </div>
+                            </div>
+                            <!-- ação do produto -->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Adicionar ao Checkout</a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
-        </div>
-            <div class="mt-4" id="res">
-                
-            </div>
-        </main>
+        </section>
 
         <!-- Footer-->
         <footer class="py-5 bg-red">
