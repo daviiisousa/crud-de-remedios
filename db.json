@@ -1,29 +1,14 @@
 {
   "Remedios": [
     {
-      "nome": "Dipirona",
-      "quantidade": "10",
-      "id": "5ae8"
+      "id": "127a",
+      "nome": "hhh",
+      "quantidade": "1"
     },
     {
-      "nome": "Ibuprofeno",
-      "quantidade": "10",
-      "id": "70c3"
-    },
-    {
-      "nome": "Dorflex",
-      "quantidade": "20",
-      "id": "69bd"
-    },
-    {
-      "id": "c045",
-      "nome": "rivotril",
-      "quantidade": "13"
-    },
-    {
-      "id": "2ecd",
-      "nome": "Amoxicilina",
-      "quantidade": "22"
+      "id": "a183",
+      "nome": "dipirona",
+      "quantidade": "8"
     }
   ]
 }

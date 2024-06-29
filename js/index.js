@@ -2,7 +2,6 @@
 function enviar(){
     let nomeRemedio = document.getElementById('nomeRemedio').value;
     let quantidade = document.getElementById('quantidade').value;
-    let resposta = document.getElementById('res')
     
     if(!nomeRemedio || !/^[^\d]+$/.test(nomeRemedio)){
         Swal.fire({
@@ -39,7 +38,7 @@ function enviar(){
       
       fetch("http://localhost:3000/Remedios", requestOptions)
         .then((response) => response.text( ))
-        .then((result) => API())
+        .then((result) => API(result))
         .catch((error) => console.error(error));
 }
 
@@ -47,8 +46,6 @@ async function API(){
     const requestOptions ={
         method: "GET"
     };
-
-    let resposta = document.getElementById('res');
 
    const response = await fetch("http://localhost:3000/Remedios", requestOptions);
    const data = await response.json();
@@ -86,7 +83,7 @@ function excluir(id) {
 
     fetch(`http://localhost:3000/Remedios/${id}`, requestOptions)
         .then((response) => response.text())
-        .then((result) => API())
+        .then((result) => API(result))
         .catch((error) => console.error(error));
 }
 
